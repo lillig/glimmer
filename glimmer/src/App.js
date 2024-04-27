@@ -4,7 +4,12 @@ import PostCreator from './PostCreator';
 function App() {
   return (
     <div className="App">
-      <PostCreator />
+      <header className="App-header">
+        <img src='images/logo.png' className='logo'></img>
+      </header>
+      <h2>
+
+      </h2>
     </div>
   );
 }
