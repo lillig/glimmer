@@ -3,8 +3,11 @@ import './App.css';
 function PostCreator() {
     return(
         <div className="PostCreator parent">
-            <h2>Create a Post</h2>
             <div className="PostCreator child">
+                <div className="PostCreator heading">
+                    <img src='images/close.png' className='exitIcon'></img>
+                    <h2>Create a Post</h2>
+                </div>
                 <form action="" method="get" class="form-example">
                     <div class="form-item">
                         <label for="title" hidden>Add Title</label>

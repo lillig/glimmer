@@ -7,9 +7,7 @@ function App() {
       <header className="App-header">
         <img src='images/logo.png' className='logo'></img>
       </header>
-      <h2>
-
-      </h2>
+      <PostCreator />
     </div>
   );
 }
