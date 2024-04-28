@@ -18,6 +18,7 @@ export default function App() {
     <div className="App">
       <header className="App-header">
         <img src='images/logo.png' className='logo'></img>
+        <img src='images/streak.png' className='streak'></img>
       </header>
       {
         showPosts ?
