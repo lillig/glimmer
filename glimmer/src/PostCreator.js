@@ -45,8 +45,8 @@ function PostCreator({ setShowPosts, addNewPost }) {
                             required
                         ></textarea>
                     </div>
-                    <div className="form-item">
-                        <input type="submit" value="Post" onClick={handleSubmit} />
+                    <div className="form-item submit-item">
+                        <input type="submit" value="Post" className='submit' onClick={handleSubmit} />
                     </div>
                 </form>
                 

@@ -5,6 +5,7 @@ body {
 .App {
   --purple-dark: #221B2B;
   --purple-light: #674C65;
+  --pink: #F4AFB4;
   --tan: #F0F0EA;
   min-height: 100vh;
   overflow: auto;
@@ -25,18 +26,20 @@ body {
   font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
   display: flex;
   /* flex-direction: column; */
-  align-items: left;
-  justify-content: left;
+  align-items: center;
+  justify-content: space-between;
   font-size: 20px;
   color: white;
+  margin: 15px 15px 15px 0;
 }
 
 .logo {
   height: 100px;
-  width: 210px;
 }
 
-
+.streak {
+  height: 80px;
+}
 
 textarea {
   resize: none;
@@ -62,7 +65,15 @@ textarea {
   background-color: #674c65;
   box-shadow: inset 0 0 15px #221B2B;
   border-radius: 5px;
-  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.PostCreator.child > .createPostBtn {
+  width: 100%;
+  margin: 10px 0;
 }
 
 .PostCreator.heading {
@@ -78,6 +89,17 @@ textarea {
   align-items: center;
   justify-content: flex-start;
   height: 40px;
+  border-radius: 10px;
+}
+
+.createPostBtn:hover, .submit:hover {
+  cursor: pointer;
+}
+
+.PostFeed > .createPostBtn {
+  border: var(--tan) solid 1.5px;
+  padding: 0 15px 0 0;
+  max-width: 330px;
 }
 
 h2 {
@@ -138,6 +160,53 @@ h2 {
 
 .Post > p {
   margin: 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  /* Form outline */
+  width: 90%;
+}
+
+
+input,
+textarea {
+  /* To make sure that all text fields have the same font settings
+     By default, textareas have a monospace font */
+  font: 1em sans-serif;
+  /* Uniform text field size */
+  box-sizing: border-box;
+  /* Match form field borders */
+  border: 1px solid #999;
+  background-color: var(--tan);
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.submit {
+  width: 70px;
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--purple-dark);
+}
+
+textarea {
+  height: 5em;
+}
+
+
+button, .form-item {
+  /* This extra margin represent roughly the same space as the space
+     between the labels and their text fields */
+  margin-left: -.75em;
+}
+
+.submit-item {
+  align-self: flex-end;
 }
 
 
