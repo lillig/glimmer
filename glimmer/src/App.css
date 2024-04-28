@@ -113,10 +113,10 @@ h2 {
 
 .grid {
   display: grid;
-  gap: 1rem;
+  gap: 2rem;
   grid-auto-flow: dense;
   margin: 0 0 1rem 0;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .grid > div {
@@ -125,11 +125,19 @@ h2 {
 }
 
 .Post {
-  height: 40%;
-  width: 25%;
+  max-height: 400px;
+  overflow-y: scroll;
   background-color: #674C65;
   border-radius: 5px;
+  padding: 20px;
 }
 
+.Post > h3 {
+  margin: 0 0 18px 0;
+}
+
+.Post > p {
+  margin: 0;
+}
 
 
