@@ -1,8 +1,19 @@
+import { useState } from 'react';
 
+function PostCreator({ setShowPosts, addNewPost }) {
+    const [postTitle, setPostTitle] = useState('')
+    const [postContent, setPostContent] = useState('')
 
-function PostCreator({ setShowPosts }) {
     function handleClose() {
         setShowPosts(true)
+    }
+
+    function handleSubmit(e) {
+        e.preventDefault()
+        if (postTitle && postContent) {
+            addNewPost(postTitle, postContent)
+            handleClose()
+        }
     }
 
     return(
@@ -12,18 +23,30 @@ function PostCreator({ setShowPosts }) {
                     <img src='images/close.png' className='exitIcon'></img>
                     <h2>Create a Post</h2>
                 </div>
-                <form action="" method="get" class="form-example">
-                    <div class="form-item">
-                        <label for="title" hidden>Add Title</label>
-                        <input type="text" name="title" placeholder="Add Title" required />
+                <form action="" method="get" className="form-example">
+                    <div className="form-item">
+                        <label htmlFor="title" hidden>Add Title</label>
+                        <input 
+                            type="text"
+                            name="title"
+                            placeholder="Add Title"
+                            value={postTitle}
+                            onChange={event => setPostTitle(event.target.value)}
+                            required
+                        />
                     </div>
-                    <div class="form-item">
-                        <label for="content" hidden>Enter your daily glimmers to reflect on the small, wonderful moments that bring you joy.</label>
-                        <textarea name="content" placeholder="Enter your daily glimmers to reflect on the small, wonderful moments that bring you joy." required >
-                        </textarea>
+                    <div className="form-item">
+                        <label htmlFor="content" hidden>Enter your daily glimmers to reflect on the small, wonderful moments that bring you joy.</label>
+                        <textarea
+                            name="content"
+                            placeholder="Enter your daily glimmers to reflect on the small, wonderful moments that bring you joy."
+                            value={postContent}
+                            onChange={event => setPostContent(event.target.value)}
+                            required
+                        ></textarea>
                     </div>
-                    <div class="form-item">
-                        <input type="submit" value="Post" />
+                    <div className="form-item">
+                        <input type="submit" value="Post" onClick={handleSubmit} />
                     </div>
                 </form>
                 
