@@ -1,4 +1,4 @@
-export default function Posts({ setShowPosts }) {
+export default function PostFeed({ setShowPosts }) {
     function handleClick() {
         setShowPosts(false)
     }

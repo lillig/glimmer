@@ -1,6 +1,6 @@
 import './App.css';
 import PostCreator from './PostCreator';
-import Posts from './Posts'
+import PostFeed from './PostFeed'
 import { useState } from 'react';
 
 export default function App() {
@@ -21,7 +21,7 @@ export default function App() {
       </header>
       {
         showPosts ?
-        <Posts setShowPosts={setShowPosts} posts={posts} /> :
+        <PostFeed setShowPosts={setShowPosts} posts={posts} /> :
         <PostCreator setShowPosts={setShowPosts} addNewPost={addNewPost} />
       }
     </div>
