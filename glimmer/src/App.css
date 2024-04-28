@@ -1,13 +1,22 @@
+body {
+  font-family: 'Open Sans';
+}
+
 .App {
   --purple-dark: #221B2B;
   --purple-light: #674C65;
   --tan: #F0F0EA;
   min-height: 100vh;
+  overflow: auto;
 }
 
 .App-logo {
   height: 40px;
   pointer-events: none;
+}
+
+.App, #root {
+  background-color: var(--purple-dark);
 }
 
 
@@ -48,7 +57,8 @@ textarea {
 
 .PostCreator.child {
   height: 60%;
-  width: 70%;
+  width: 60%;
+  max-width: 575px;
   background-color: #674c65;
   box-shadow: inset 0 0 15px #221B2B;
   border-radius: 5px;
@@ -96,7 +106,23 @@ h2 {
   margin-right: -6%;
 }
 
+.PostFeed {
+  width: 90%;
+  margin: 20px;
+}
 
+.grid {
+  display: grid;
+  gap: 1rem;
+  grid-auto-flow: dense;
+  margin: 0 0 1rem 0;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.grid > div {
+  background: var(--purple-light);
+  min-width: 10px;
+}
 
 
 

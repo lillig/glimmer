@@ -19,7 +19,7 @@ export default function PostFeed({ setShowPosts, posts }) {
                 <img src='images/create.png' className='create'></img>
                 <h2>Create a Post</h2>
             </div>
-            <div className='posts'>{postComponents}</div>
+            <div className='posts grid'>{postComponents}</div>
         </div>
     )
 }
