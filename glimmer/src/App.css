@@ -33,7 +33,7 @@ textarea {
   resize: none;
 }
 
-.PostCreator.parent, .Posts {
+.PostCreator.parent, .PostFeed {
   width: 100%;
   height: calc(100vh - 100px);
   background-color: var(--purple-dark);
@@ -68,7 +68,7 @@ h2 {
   color: #000;
 }
 
-.Posts h2 {
+.PostFeed h2 {
   color: #fff;
 }
 

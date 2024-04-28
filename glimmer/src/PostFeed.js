@@ -4,7 +4,7 @@ export default function PostFeed({ setShowPosts }) {
     }
 
     return (
-        <div className="Posts">
+        <div className="PostFeed">
             <div className="createPostBtn" onClick={handleClick}>
                 <img src='images/create.png' className='create'></img>
                 <h2>Create a Post</h2>
