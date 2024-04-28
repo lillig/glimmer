@@ -7,8 +7,11 @@ export default function App() {
   const [showPosts, setShowPosts] = useState(true)
   const [posts, setPosts] = useState({})
 
-  function addNewPost() {
-    console.log('Add new post!')
+  function addNewPost(postTitle, postContent) {
+    let newPosts = {...posts}
+    const postID = Object.keys(newPosts).length + 1
+    newPosts[postID] = [postTitle, postContent]
+    setPosts(newPosts)
   }
 
   return (
