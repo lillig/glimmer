@@ -96,7 +96,12 @@ h2 {
   margin-right: -6%;
 }
 
-
+.Post {
+  height: 40%;
+  width: 25%;
+  background-color: #674C65;
+  border-radius: 5px;
+}
 
 
 
