@@ -1,10 +1,14 @@
 
 
-function PostCreator() {
+function PostCreator({ setShowPosts }) {
+    function handleClose() {
+        setShowPosts(true)
+    }
+
     return(
         <div className="PostCreator parent">
             <div className="PostCreator child">
-                <div className="PostCreator heading">
+                <div className="createPostBtn" onClick={handleClose}>
                     <img src='images/close.png' className='exitIcon'></img>
                     <h2>Create a Post</h2>
                 </div>

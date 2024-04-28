@@ -1,7 +1,14 @@
-export default function Posts() {
+export default function Posts({ setShowPosts }) {
+    function handleClick() {
+        setShowPosts(false)
+    }
+
     return (
-        <>
-            Posts!
-        </>
+        <div className="Posts">
+            <div className="createPostBtn" onClick={handleClick}>
+                <img src='images/create.png' className='create'></img>
+                <h2>Create a Post</h2>
+            </div>
+        </div>
     )
 }

@@ -12,7 +12,7 @@
 
 
 .App-header {
-  background-color: #221B2B;
+  background-color: var(--purple-dark);
   font-family: Inter, Roboto, 'Helvetica Neue', 'Arial Nova', 'Nimbus Sans', Arial, sans-serif;
   display: flex;
   /* flex-direction: column; */
@@ -33,14 +33,17 @@ textarea {
   resize: none;
 }
 
+.PostCreator.parent, .Posts {
+  width: 100%;
+  height: calc(100vh - 100px);
+  background-color: var(--purple-dark);
+}
+
 .PostCreator.parent {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100%;
-  height: calc(100vh - 100px);
-  background-color: var(--purple-dark);
 }
 
 .PostCreator.child {
@@ -49,20 +52,29 @@ textarea {
   background-color: var(--tan);
 }
 
-.PostCreator.heading {
+.createPostBtn {
   display: flex;
   align-items: center;
   justify-content: flex-start;
   height: 40px;
 }
 
-.PostCreator h2 { 
-  color: #000;
+h2 {
   font-size: 18px;
   margin: 0 0 0 24px;
+}
+
+.PostCreator h2 { 
+  color: #000;
+}
+
+.Posts h2 {
+  color: #fff;
 }
 
 .form-item {
   margin-bottom: 50px;
 }
+
+
 

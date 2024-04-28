@@ -13,8 +13,8 @@ export default function App() {
       </header>
       {
         showPosts ?
-        <Posts /> :
-        <PostCreator />
+        <Posts setShowPosts={setShowPosts} /> :
+        <PostCreator setShowPosts={setShowPosts} />
       }
     </div>
   );
